@@ -4,173 +4,161 @@
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#090d16" />
       <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#0a0e1a" />
+      <stop offset="100%" stop-color="#0b1120" />
     </linearGradient>
 
-    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
-    </linearGradient>
+    <!-- Glowing accents -->
+    <radialGradient id="radialCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
 
-    <linearGradient id="glowGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#ec4899" stop-opacity="0" />
-    </linearGradient>
+    <radialGradient id="radialPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
 
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="40%" stop-color="#818cf8" />
-      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
       <stop offset="100%" stop-color="#f472b6" />
     </linearGradient>
 
     <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.9" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
     </linearGradient>
-
-    <!-- Drop Shadow Filters -->
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.7" />
-    </filter>
-
-    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
-  <style>
-    @keyframes pulseOrb {
-      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
-      50% { transform: scale(1.15) translate(-20px, 15px); opacity: 0.6; }
-    }
-    @keyframes floatParticle {
-      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
-      50% { transform: translateY(-25px) translateX(15px); opacity: 0.8; }
-      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
-    }
-    @keyframes waveDash {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: -1200; }
-    }
-    @keyframes pulseRing {
-      0% { r: 4px; opacity: 1; }
-      50% { r: 9px; opacity: 0.4; }
-      100% { r: 4px; opacity: 1; }
-    }
-    .orb1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 200px 100px; }
-    .orb2 { animation: pulseOrb 10s ease-in-out infinite reverse; transform-origin: 1000px 260px; }
-    .part1 { animation: floatParticle 6s ease-in-out infinite; }
-    .part2 { animation: floatParticle 8s ease-in-out 1.5s infinite; }
-    .part3 { animation: floatParticle 7s ease-in-out 3s infinite; }
-    .telemetryLine {
-      stroke-dasharray: 10 14;
-      animation: waveDash 35s linear infinite;
-    }
-    .statusRing { animation: pulseRing 3s ease-in-out infinite; }
-  </style>
+  <!-- Base Card Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
 
-  <!-- Base Canvas -->
-  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+  <!-- Dynamic Glowing Orbs in Background -->
+  <circle cx="180" cy="90" r="180" fill="url(#radialCyan)">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="r" values="160;195;160" dur="8s" repeatCount="indefinite" />
+  </circle>
 
-  <!-- Animated Background Glow Orbs -->
-  <g class="orb1">
-    <circle cx="200" cy="110" r="170" fill="url(#glowGrad1)" />
-  </g>
-  <g class="orb2">
-    <circle cx="1020" cy="250" r="190" fill="url(#glowGrad2)" />
+  <circle cx="1030" cy="240" r="210" fill="url(#radialPurple)">
+    <animate attributeName="opacity" values="0.3;0.65;0.3" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="r" values="180;220;180" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Clean Subtle Grid (Zero interference with text) -->
+  <g stroke="#334155" stroke-opacity="0.16" stroke-width="1">
+    <line x1="120" y1="0" x2="120" y2="360" />
+    <line x1="280" y1="0" x2="280" y2="360" />
+    <line x1="440" y1="0" x2="440" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="760" y1="0" x2="760" y2="360" />
+    <line x1="920" y1="0" x2="920" y2="360" />
+    <line x1="1080" y1="0" x2="1080" y2="360" />
+
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="130" x2="1200" y2="130" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="270" x2="1200" y2="270" />
   </g>
 
-  <!-- Technical Grid Background Pattern (Low Opacity) -->
-  <g stroke="#334155" stroke-opacity="0.18" stroke-width="1">
-    <line x1="80" y1="0" x2="80" y2="360" />
-    <line x1="240" y1="0" x2="240" y2="360" />
-    <line x1="400" y1="0" x2="400" y2="360" />
-    <line x1="560" y1="0" x2="560" y2="360" />
-    <line x1="720" y1="0" x2="720" y2="360" />
-    <line x1="880" y1="0" x2="880" y2="360" />
-    <line x1="1040" y1="0" x2="1040" y2="360" />
-    
-    <line x1="0" y1="70" x2="1200" y2="70" />
-    <line x1="0" y1="140" x2="1200" y2="140" />
-    <line x1="0" y1="210" x2="1200" y2="210" />
-    <line x1="0" y1="280" x2="1200" y2="280" />
-  </g>
+  <!-- Animated Telemetry Wave at Bottom (Behind text) -->
+  <path d="M 0 310 Q 300 240, 600 300 T 1200 280" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="d" values="M 0 310 Q 300 240, 600 300 T 1200 280; M 0 290 Q 300 330, 600 270 T 1200 300; M 0 310 Q 300 240, 600 300 T 1200 280" dur="8s" repeatCount="indefinite" />
+  </path>
+  <path d="M 0 330 Q 300 280, 600 340 T 1200 310" fill="none" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.3">
+    <animate attributeName="d" values="M 0 330 Q 300 280, 600 340 T 1200 310; M 0 310 Q 300 350, 600 290 T 1200 320; M 0 330 Q 300 280, 600 340 T 1200 310" dur="10s" repeatCount="indefinite" />
+  </path>
 
-  <!-- Dynamic Animated Telemetry Curves (Behind Text Layer) -->
-  <path class="telemetryLine" d="M 0 310 C 250 240, 450 330, 700 270 C 950 210, 1080 290, 1200 260" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-opacity="0.45" />
-  <path class="telemetryLine" d="M 0 330 C 280 290, 520 350, 780 295 C 980 250, 1100 320, 1200 300" fill="none" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.35" style="animation-duration: 45s;" />
+  <!-- Floating Signal Beacons -->
+  <circle cx="260" cy="75" r="3.5" fill="#38bdf8">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="940" cy="85" r="4" fill="#818cf8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="730" cy="55" r="3" fill="#ec4899">
+    <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1070" cy="170" r="3" fill="#34d399">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+  </circle>
 
-  <!-- Floating Signal Nodes -->
-  <circle cx="280" cy="85" r="3.5" fill="#38bdf8" class="part1" />
-  <circle cx="940" cy="110" r="4" fill="#818cf8" class="part2" />
-  <circle cx="760" cy="65" r="3" fill="#ec4899" class="part3" />
-  <circle cx="160" cy="275" r="3" fill="#34d399" class="part2" />
-  <circle cx="1060" cy="180" r="3.5" fill="#fbbf24" class="part1" />
-
-  <!-- Status Pulse Badges Top Row -->
-  <g transform="translate(60, 42)">
-    <rect width="170" height="28" rx="14" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+  <!-- Top Status Badges -->
+  <g transform="translate(60, 36)">
+    <rect width="180" height="28" rx="14" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
     <circle cx="16" cy="14" r="5" fill="#10b981" />
-    <circle cx="16" cy="14" r="7" fill="none" stroke="#10b981" class="statusRing" stroke-width="1.5" />
-    <text x="32" y="18" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">CONTINUOUS TESTING</text>
+    <circle cx="16" cy="14" r="7" fill="none" stroke="#10b981" stroke-width="1.5">
+      <animate attributeName="r" values="5;10;5" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="18" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">CONTINUOUS TESTING</text>
   </g>
 
-  <g transform="translate(940, 42)">
-    <rect width="200" height="28" rx="14" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+  <g transform="translate(935, 36)">
+    <rect width="205" height="28" rx="14" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
     <circle cx="16" cy="14" r="5" fill="#38bdf8" />
-    <circle cx="16" cy="14" r="7" fill="none" stroke="#38bdf8" class="statusRing" stroke-width="1.5" />
-    <text x="32" y="18" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">TELEMETRY &amp; INSIGHTS</text>
+    <circle cx="16" cy="14" r="7" fill="none" stroke="#38bdf8" stroke-width="1.5">
+      <animate attributeName="r" values="5;10;5" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="18" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">TELEMETRY &amp; INSIGHTS</text>
   </g>
 
-  <!-- FOREGROUND CONTENT: Header, Title & Subtitles with Clear Contrast -->
-  <g filter="url(#shadow)">
+  <!-- CLEAR FOREGROUND TEXT CONTENT -->
+  <g id="foreground-content">
+    <!-- Main Title Shadow for sharp contrast -->
+    <text x="602" y="152" text-anchor="middle" fill="#000000" fill-opacity="0.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Awesome Test Execution Analytics
+    </text>
     <!-- Main Title -->
-    <text x="600" y="152" text-anchor="middle" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+    <text x="600" y="150" text-anchor="middle" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
       Awesome Test Execution Analytics
     </text>
 
+    <!-- Subtitle Shadow -->
+    <text x="601" y="195" text-anchor="middle" fill="#000000" fill-opacity="0.7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0.2">
+      Pipeline Observability &bull; Flaky Test Detection &bull; TestOps Intelligence
+    </text>
     <!-- Subtitle (Category Focus) -->
-    <text x="600" y="196" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" letter-spacing="0.2">
+    <text x="600" y="194" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0.2">
       Pipeline Observability &bull; Flaky Test Detection &bull; TestOps Intelligence
     </text>
 
     <!-- Description Line -->
-    <text x="600" y="232" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="0.3">
+    <text x="600" y="230" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="0.3">
       Curated catalog of top enterprise SaaS platforms and battle-tested open-source solutions
     </text>
   </g>
 
   <!-- Accent Divider -->
-  <line x1="280" y1="262" x2="920" y2="262" stroke="url(#lineGrad)" stroke-width="2" />
+  <line x1="280" y1="258" x2="920" y2="258" stroke="url(#lineGrad)" stroke-width="2" />
 
-  <!-- Feature Tags / Pills -->
+  <!-- Feature Pills / Category Badges -->
   <g transform="translate(600, 292)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">
     <!-- Tag 1 -->
     <g transform="translate(-360, 0)">
-      <rect x="-10" y="-12" width="135" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <rect x="-10" y="-12" width="135" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
       <text x="57" y="5" text-anchor="middle" fill="#38bdf8">&bull; Test Observability</text>
     </g>
     <!-- Tag 2 -->
     <g transform="translate(-195, 0)">
-      <rect x="-10" y="-12" width="140" height="26" rx="13" fill="#1e293b" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+      <rect x="-10" y="-12" width="140" height="26" rx="13" fill="#1e293b" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.2" />
       <text x="60" y="5" text-anchor="middle" fill="#a5b4fc">&bull; Flake Quarantine</text>
     </g>
     <!-- Tag 3 -->
     <g transform="translate(-25, 0)">
-      <rect x="-10" y="-12" width="165" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+      <rect x="-10" y="-12" width="165" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-opacity="0.5" stroke-width="1.2" />
       <text x="72" y="5" text-anchor="middle" fill="#d8b4fe">&bull; Predictive Selection</text>
     </g>
     <!-- Tag 4 -->
     <g transform="translate(165, 0)">
-      <rect x="-10" y="-12" width="125" height="26" rx="13" fill="#1e293b" stroke="#34d399" stroke-opacity="0.4" stroke-width="1" />
+      <rect x="-10" y="-12" width="125" height="26" rx="13" fill="#1e293b" stroke="#34d399" stroke-opacity="0.5" stroke-width="1.2" />
       <text x="52" y="5" text-anchor="middle" fill="#6ee7b7">&bull; CI/CD Telemetry</text>
     </g>
     <!-- Tag 5 -->
     <g transform="translate(315, 0)">
-      <rect x="-10" y="-12" width="115" height="26" rx="13" fill="#1e293b" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1" />
+      <rect x="-10" y="-12" width="115" height="26" rx="13" fill="#1e293b" stroke="#f472b6" stroke-opacity="0.5" stroke-width="1.2" />
       <text x="47" y="5" text-anchor="middle" fill="#f472b6">&bull; Open Source</text>
     </g>
   </g>
