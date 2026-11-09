@@ -118,11 +118,11 @@
 
     <!-- Subtitle Shadow -->
     <text x="601" y="195" text-anchor="middle" fill="#000000" fill-opacity="0.7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0.2">
-      Pipeline Observability &bull; Flaky Test Detection &bull; TestOps Intelligence
+      Pipeline Observability &#8226; Flaky Test Detection &#8226; TestOps Intelligence
     </text>
     <!-- Subtitle (Category Focus) -->
     <text x="600" y="194" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0.2">
-      Pipeline Observability &bull; Flaky Test Detection &bull; TestOps Intelligence
+      Pipeline Observability &#8226; Flaky Test Detection &#8226; TestOps Intelligence
     </text>
 
     <!-- Description Line -->
@@ -139,27 +139,27 @@
     <!-- Tag 1 -->
     <g transform="translate(-360, 0)">
       <rect x="-10" y="-12" width="135" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
-      <text x="57" y="5" text-anchor="middle" fill="#38bdf8">&bull; Test Observability</text>
+      <text x="57" y="5" text-anchor="middle" fill="#38bdf8">&#8226; Test Observability</text>
     </g>
     <!-- Tag 2 -->
     <g transform="translate(-195, 0)">
       <rect x="-10" y="-12" width="140" height="26" rx="13" fill="#1e293b" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.2" />
-      <text x="60" y="5" text-anchor="middle" fill="#a5b4fc">&bull; Flake Quarantine</text>
+      <text x="60" y="5" text-anchor="middle" fill="#a5b4fc">&#8226; Flake Quarantine</text>
     </g>
     <!-- Tag 3 -->
     <g transform="translate(-25, 0)">
       <rect x="-10" y="-12" width="165" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-opacity="0.5" stroke-width="1.2" />
-      <text x="72" y="5" text-anchor="middle" fill="#d8b4fe">&bull; Predictive Selection</text>
+      <text x="72" y="5" text-anchor="middle" fill="#d8b4fe">&#8226; Predictive Selection</text>
     </g>
     <!-- Tag 4 -->
     <g transform="translate(165, 0)">
       <rect x="-10" y="-12" width="125" height="26" rx="13" fill="#1e293b" stroke="#34d399" stroke-opacity="0.5" stroke-width="1.2" />
-      <text x="52" y="5" text-anchor="middle" fill="#6ee7b7">&bull; CI/CD Telemetry</text>
+      <text x="52" y="5" text-anchor="middle" fill="#6ee7b7">&#8226; CI/CD Telemetry</text>
     </g>
     <!-- Tag 5 -->
     <g transform="translate(315, 0)">
       <rect x="-10" y="-12" width="115" height="26" rx="13" fill="#1e293b" stroke="#f472b6" stroke-opacity="0.5" stroke-width="1.2" />
-      <text x="47" y="5" text-anchor="middle" fill="#f472b6">&bull; Open Source</text>
+      <text x="47" y="5" text-anchor="middle" fill="#f472b6">&#8226; Open Source</text>
     </g>
   </g>
 </svg>
