@@ -6,7 +6,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-buueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&lggoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-blue.svg?style=flat-square" alt="License: CC0 1.0" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Test-Execution-Analytics-Insights/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Test-Execution-Analytics-Insights?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Test-Execution-Analytics-Insights/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Test-Execution-Analytics-Insights?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Test-Execution-Analytics-Insights/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Test-Execution-Analytics-Insights?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -102,7 +102,7 @@ Self-hosted, community-driven, and open-source test analytics servers, dashboard
 
 ### ⭐ Top Open-Source Repositories (Ranked by Stars)
 
-| Repository 📦 | GitHub Stars Badge ⭐ | Primary Stack 🛠️ | License 📜 | Description 📝 |
+| Repository 📦 | GitHub_Stars_Badge ⭐ | Primary Stack 🛠️ | License 📜 | Description 📝 |
 |:---|:---|:---|:---|:---|
 | **[Allure 2 (Allure Report)](https://github.com/allure-framework/allure2)** | [![Allure2 Stars](https://img.shields.io/github/stars/allure-framework/allure2?style=social&color=white)](https://github.com/allure-framework/allure2/stargazers) | Java / TypeScript / Multi-lang | Apache-2.0 | Lightweight, multi-language test execution reporting platform generating interactive graphical web reports with timeline graphs and metadata attachments 📊. |
 | **[Sorry Cypress](https://github.com/sorry-cypress/sorry-cypress)** | [![Sorry Cypress Stars](https://img.shields.io/github/stars/sorry-cypress/sorry-cypress?style=social&color=white)](https://github.com/sorry-cypress/sorry-cypress/stargazers) | Node.js / React / MongoDB | MIT | Full-featured, self-hosted, open-source alternative to Cypress Cloud / Cypress Dashboard with parallelization, video/screenshot recording, and test analytics 🎥. |
@@ -205,7 +205,7 @@ Contributions are welcome! Please check out our guidelines 💡:
 
 1. Fork this repository 🍴.
 2. Create a new branch: `git checkout -b feature/new-tool` 🌿.
-3. Add the platform or tool with verified pricing, free tier limits, stack specifications, and repository star badges 📝.
+3. Add the platform or tool with verified pricing, free tier limits, stack specifications, and repository Stars_Badges 📝.
 4. Open a Pull Request detailing the benefits and relevance to test execution analytics 🚀.
 
 ---
