@@ -108,6 +108,7 @@ Self-hosted, community-driven, and open-source test analytics servers, dashboard
 | **[Sorry Cypress](https://github.com/sorry-cypress/sorry-cypress)** | [![Sorry Cypress Stars](https://img.shields.io/github/stars/sorry-cypress/sorry-cypress?style=social&color=white)](https://github.com/sorry-cypress/sorry-cypress/stargazers) | Node.js / React / MongoDB | MIT | Full-featured, self-hosted, open-source alternative to Cypress Cloud / Cypress Dashboard with parallelization, video/screenshot recording, and test analytics 🎥. |
 | **[ReportPortal](https://github.com/reportportal/reportportal)** | [![ReportPortal Stars](https://img.shields.io/github/stars/reportportal/reportportal?style=social&color=white)](https://github.com/reportportal/reportportal/stargazers) | Java / React / PostgreSQL / OpenSearch | Apache-2.0 | Enterprise-grade AI-powered TestOps service providing real-time execution dashboards, automated ML failure triage, flaky test tracking, and quality gates 🤖. |
 | **[Testkube](https://github.com/kubeshop/testkube)** | [![Testkube Stars](https://img.shields.io/github/stars/kubeshop/testkube?style=social&color=white)](https://github.com/kubeshop/testkube/stargazers) | Go / Kubernetes | MIT | Kubernetes-native testing orchestration and observability platform featuring unified execution dashboards, log streams, and multi-cluster test analytics ☸️. |
+| **[agent-qa](https://vostride.com)** | [![agent-qa Stars](https://img.shields.io/github/stars/vostride/agent-qa?style=social&color=white)](https://github.com/vostride/agent-qa/stargazers) | TypeScript / Node.js 24+ | FSL-1.1-ALv2 | Local QA dashboard for agent-qa runs with pass-rate, duration, token-use and memidex-change trends, step/screenshot evidence and validated self-improvement. |
 | **[pytest-html](https://github.com/pytest-dev/pytest-html)** | [![pytest-html Stars](https://img.shields.io/github/stars/pytest-dev/pytest-html?style=social&color=white)](https://github.com/pytest-dev/pytest-html/stargazers) | Python / Pytest | Mozilla Public License 2.0 | Widely adopted pytest plugin that generates self-contained, interactive HTML reports with test duration metrics, failure traces, and environment details 🐍. |
 | **[GitHub Test Reporter (CTRF)](https://github.com/ctrf-io/github-test-reporter)** | [![CTRF Reporter Stars](https://img.shields.io/github/stars/ctrf-io/github-test-reporter?style=social&color=white)](https://github.com/ctrf-io/github-test-reporter/stargazers) | TypeScript / GitHub Actions | MIT | Universal CI test reporter publishing structured summaries, failure analyses, duration trends, and flaky test detection directly to PR comments and step summaries 🐙. |
 
@@ -135,6 +136,12 @@ Self-hosted, community-driven, and open-source test analytics servers, dashboard
 - **Key Features:** Executes tests directly inside target Kubernetes clusters, eliminating CI runner bottlenecks. Centralizes test execution telemetry, artifact management, and failure tracking across clusters 🌐.
 - **Why It Stands Out:** Purpose-built for cloud-native workflows and microservice testing inside real Kubernetes environments 🚢.
 
+#### 🧪 agent-qa (`vostride/agent-qa`)
+- **Architecture:** Local TypeScript dashboard using the same run store as the CLI and MCP; Node.js 24+.
+- **Key Features:** Charts pass rate, duration, token usage and memidex changes over one, seven or 30 days, or all time, with a per-test breakdown and step/screenshot evidence.
+- **Why It Stands Out:** Persistent memidex memory and validated self-improvement connect later QA runs to reviewable application knowledge.
+- **Pricing & Requirements:** $0 software for local uses permitted by FSL-1.1-ALv2; a configured model and test environment are needed for runs. Model, compute/browser/device, CI/storage and optional remote-service costs are separate.
+
 #### 🐍 pytest-html (`pytest-dev/pytest-html`)
 - **Architecture:** Native Python pytest hook plugin 🔌.
 - **Key Features:** Generates static, self-contained HTML dashboards containing test execution tables, filterable statuses, log attachments, execution duration charts, and system metadata 📋.
@@ -161,6 +168,7 @@ Self-hosted, community-driven, and open-source test analytics servers, dashboard
 | **Sorry Cypress** | Self-Hosted | ✅ Flake Tracking | ❌ | ✅ Universal | ✅ Run Trends | ✅ Free & Open |
 | **ReportPortal** | Self-Hosted / Cloud | ✅ AI Classifier | ❌ | ✅ Universal | ✅ Rich Widgets | ✅ Free & Open |
 | **Testkube** | Self-Hosted / Cloud | ✅ Suite Analytics | ❌ | ✅ K8s Native | ✅ Executions Dashboard | ✅ Free & Open |
+| **agent-qa** | Local dashboard | Not claimed | Not claimed | CLI-based runs | Own-run trends | ✅ Local software |
 | **pytest-html** | Local / Artifact | ❌ | ❌ | ✅ CI Artifacts | ❌ (Static) | ✅ Free & Open |
 | **GitHub Test Reporter** | GitHub Action | ✅ Flake Detection | ❌ | ✅ GitHub Actions | ✅ Step Summaries | ✅ Free & Open |
 
